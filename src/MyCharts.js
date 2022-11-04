@@ -59,7 +59,7 @@ const MyCharts = ({ dateData }) => {
       <Chart
         options={options}
         series={series}
-        width="100%"
+        width="500px"
       />
     </div>
   )
