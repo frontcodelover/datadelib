@@ -12,8 +12,6 @@ import {
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
 
-
-
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -32,15 +30,8 @@ ChartJS.register(
       return prev;
   }, {})
 
-  console.log(dateFormat)
-  
   let tabDate = Object.keys(dateFormat).reverse()
-console.log("TABDATE", tabDate)
-
   let tabDelib = Object.values(dateFormat).reverse()
-  console.log("TABDELIB", tabDelib)
-
-
 
   const options = {
     responsive: true,

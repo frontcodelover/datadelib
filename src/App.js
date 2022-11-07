@@ -1,14 +1,14 @@
-import logo from "./logo.svg";
 import "./App.css";
 import react, { useState, useEffect } from "react";
-import MyCharts from "./MyCharts";
 import { Charts } from "./Charts";
+import Sidebar from "./Sidebar";
+import Main from "./components/layout/main/main";
+import styled from "styled-components";
 
 function App() {
   const [myData, setMyData] = useState([]);
   const [fields, setFields] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [myDateFormat, setMyDataFormat] = useState([]);
 
   //https://data.eurelien.fr/api/records/1.0/search/?dataset=deliberations_cd28_2022&q=&rows=500&facet=delib_date&facet=delib_matiere_nom&facet=budget_nom&facet=nature_acte
 
@@ -30,17 +30,43 @@ function App() {
     fetchData();
   }, []);
 
-  console.log("MYDATA", myData);
-
   return (
     <div className="App">
       {!isLoading && (
-        <>
-          <Charts dateData={myData} />
-        </>
+        <Grid>
+          {/* <Charts dateData={myData} /> */}
+          <Container>
+            <SideBarStyle>
+              <Sidebar />
+            </SideBarStyle>
+          </Container>
+          <div>
+            <Main />
+          </div>
+        </Grid>
       )}
     </div>
   );
 }
 
 export default App;
+
+const Container = styled.div`
+  display: block;
+  position: relative;
+`;
+
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  position: relative;
+`;
+
+const SideBarStyle = styled.div`
+  background-color: #fff;
+  height: 100vh;
+  box-shadow: 0px 0px 15px 5px #cfcfcff0;
+  color: #1a1e29;
+  /* position: fixed; */
+  padding:0 70px;
+`;
