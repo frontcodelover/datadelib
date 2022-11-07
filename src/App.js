@@ -53,12 +53,12 @@ export default App;
 
 const Container = styled.div`
   display: block;
-  position: relative;
+  position: block;
 `;
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: 1fr 4fr;
   position: relative;
 `;
 
@@ -67,6 +67,7 @@ const SideBarStyle = styled.div`
   height: 100vh;
   box-shadow: 0px 0px 15px 5px #cfcfcff0;
   color: #1a1e29;
-  /* position: fixed; */
-  padding:0 70px;
+  position: fixed;
+  width: 200px;
+  padding: 0 70px;
 `;
