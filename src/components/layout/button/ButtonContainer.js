@@ -3,6 +3,7 @@ import Button from './Button'
 import styled from 'styled-components'
 
 export default function ButtonContainer() {
+
 	return (
 		<ButtonContent>
 			<Button>Janvier</Button>

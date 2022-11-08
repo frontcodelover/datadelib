@@ -1,12 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export default function BlockData({ bgColor, color }) {
+export default function BlockData({ bgColor, color, data, type }) {
+	console.log("BLOCK", data)
 	return (
 		<Block bgColor={bgColor} color={color}>
 			<Container>
-				<Number>691</Number>
-				<TextNumber>Nombre de délibération</TextNumber>
+				<Number>{data}</Number>
+				<TextNumber>{type + "s"}</TextNumber>
 			</Container>
 		</Block>
 	)
