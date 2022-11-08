@@ -23,27 +23,31 @@ ChartJS.register(
   Legend
   );
   
-  export function Charts({ dateData }) {
+  export function Charts({ myData }) {
 
-    const dateFormat = dateData?.reduce(function(prev, cur) {
+    const dateFormat = myData?.reduce(function(prev, cur) {
       prev[cur] = (prev[cur] || 0) + 1;
       return prev;
-  }, {})
+    }, {})
+    
+    console.log(myData)
 
-  let tabDate = Object.keys(dateFormat).reverse()
-  let tabDelib = Object.values(dateFormat).reverse()
+  let tabDate = Object?.keys(dateFormat)?.reverse()
+  let tabDelib = Object?.values(dateFormat)?.reverse()
 
   const options = {
     responsive: true,
   plugins: {
     legend: {
+      display: false,
       position: 'top',
     },
+  },
     title: {
-      display: true,
+      display: false,
       text: 'Chart.js Line Chart',
     },
-  },
+    
 };
 
 const labels = tabDate;
@@ -52,11 +56,12 @@ const data = {
   labels,
   datasets: [
     {
-      fill: true,
+      fill: false,
       label: "Nombre d'actes",
       data: tabDelib,
-      borderColor: 'rgb(53, 162, 235)',
-      backgroundColor: 'rgba(53, 162, 235, 0.5)',
+      borderColor: '#00DEA3',
+      backgroundColor: '#00DEA3',
+      tension: 0.4
     },
   ],
 };
