@@ -22,8 +22,9 @@ const Container = styled.div`
 	justify-content: space-between;
 	height: auto;
 	padding: 30px;
-	margin: 0 50px;
+	margin: 0 50px 30px;
 	border-radius: 10px;
 	flex-direction: column;
 	background-color: #fff;
+	box-shadow: 2px 3px 5px 1px #ccc;
 `

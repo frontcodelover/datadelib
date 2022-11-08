@@ -5,7 +5,6 @@ export default function Button({ children }) {
 	const getValueButton = (e) => {
 		console.log(e.target.textContent)
 	}
-
 	return <ButtonDiv onClick={getValueButton}>{children}</ButtonDiv>
 }
 

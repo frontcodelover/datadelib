@@ -3,6 +3,7 @@ import BlockData from './block/BlockData'
 import styled from 'styled-components'
 import ChartContainer from './charts/ChartContainer'
 import { useQuery } from '@tanstack/react-query'
+import ListContainer from '../../list/ListContainer'
 
 export default function Main() {
 	const [myData, setMyData] = useState([])
@@ -47,6 +48,7 @@ export default function Main() {
 						/>
 					</Section>
 					<ChartContainer myData={myData}></ChartContainer>
+					<ListContainer data={data} />
 				</>
 			)}
 		</>

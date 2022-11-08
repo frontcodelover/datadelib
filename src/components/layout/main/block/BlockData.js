@@ -19,6 +19,8 @@ const Block = styled.div`
 	width: 33%;
 	height: 150px;
 	color: ${(props) => props.color};
+	border: 1px solid ${(props) => props.color};
+	box-shadow: 2px 3px 5px 1px #ccc;
 `
 
 const Number = styled.p`
@@ -33,6 +35,7 @@ const TextNumber = styled.p`
 	padding: 0 10px;
 	font-weight: 400;
 	font-size: 20px;
+	font-weight: 600;
 `
 
 const Container = styled.div`
